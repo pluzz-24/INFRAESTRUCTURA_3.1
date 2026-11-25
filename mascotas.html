@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mascotas | PetCare</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>🐾 PetCare</h1>
+  <nav>
+    <a href="index.html" class="">Inicio</a>
+    <a href="propietarios.html" class="">Propietarios</a>
+    <a href="mascotas.html" class="activo">Mascotas</a>
+  </nav>
+</header>
+<main>
+  <section class="tarjeta">
+    <h2>Formulario de mascotas</h2>
+    <form onsubmit="return false;">
+      <div><label for="id_mascota">ID mascota</label>
+        <input type="number" id="id_mascota" name="id_mascota" placeholder="Automático" readonly></div>
+      <div><label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" maxlength="80" required></div>
+      <div><label for="especie">Especie *</label>
+        <select id="especie" name="especie" required>
+          <option value="">Seleccione...</option><option>Perro</option><option>Gato</option><option>Ave</option><option>Conejo</option><option>Otro</option>
+        </select></div>
+      <div><label for="raza">Raza</label>
+        <input type="text" id="raza" name="raza" maxlength="60"></div>
+      <div><label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"></div>
+      <div><label for="peso_kg">Peso (kg)</label>
+        <input type="number" id="peso_kg" name="peso_kg" step="0.01" min="0"></div>
+      <div><label for="id_propietario">Propietario *</label>
+        <select id="id_propietario" name="id_propietario" required>
+          <option value="">Seleccione...</option>
+          <option value="1">1 - Laura Gómez</option><option value="2">2 - Carlos Pérez</option><option value="3">3 - Andrea Rojas</option>
+        </select></div>
+      <div class="botones">
+        <button class="btn btn-reg" type="button">Registrar</button>
+        <button class="btn btn-con" type="button">Consultar</button>
+        <button class="btn btn-mod" type="button">Modificar</button>
+        <button class="btn btn-eli" type="button">Eliminar</button>
+        <button class="btn btn-lim" type="reset">Limpiar</button>
+      </div>
+    </form>
+  </section>
+  <section class="tarjeta">
+    <h2>Listado de mascotas</h2>
+    <div class="buscador"><input type="search" placeholder="Buscar por nombre o especie">
+      <button class="btn btn-con" type="button">Buscar</button></div>
+    <div class="tabla-wrap"><table>
+      <thead><tr><th>ID</th><th>Nombre</th><th>Especie</th><th>Raza</th><th>Nacimiento</th><th>Peso (kg)</th><th>Propietario</th><th>Acciones</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Max</td><td>Perro</td><td>Golden Retriever</td><td>2020-03-12</td><td>30.50</td><td>Laura Gómez</td><td><button class="btn btn-mod">Editar</button><button class="btn btn-eli">Eliminar</button></td></tr>
+        <tr><td>2</td><td>Luna</td><td>Gato</td><td>Siamés</td><td>2021-07-01</td><td>4.20</td><td>Laura Gómez</td><td><button class="btn btn-mod">Editar</button><button class="btn btn-eli">Eliminar</button></td></tr>
+        <tr><td>3</td><td>Rocky</td><td>Perro</td><td>Bulldog</td><td>2019-11-25</td><td>22.00</td><td>Carlos Pérez</td><td><button class="btn btn-mod">Editar</button><button class="btn btn-eli">Eliminar</button></td></tr>
+        <tr><td>4</td><td>Kiwi</td><td>Ave</td><td>Periquito</td><td>2023-01-15</td><td>0.04</td><td>Andrea Rojas</td><td><button class="btn btn-mod">Editar</button><button class="btn btn-eli">Eliminar</button></td></tr>
+      </tbody></table></div>
+  </section>
+</main>
+<footer>Proyecto final – Entrega 1 · Datos ficticios</footer>
+</body>
+</html>
